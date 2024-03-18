@@ -13,7 +13,7 @@ function Navbar() {
 
   return (
     <>
-      <div className='border-2 p-4 flex justify-between items-center'>
+      <div className='p-4  py-6 flex justify-between items-center'>
         <div className='mx-4 flex text-[2vmax] text-[#071A45] font-thin'>
           <p className='font-bold mr-2'>XYZ</p>INDUSTRIES
         </div>
@@ -56,7 +56,7 @@ function Navbar() {
             
           </div>
         )}
-        <div className='hidden  lg:flex justify-evenly w-[80%]'>
+        <div className='hidden lg:flex justify-between w-[60%] mr-8'>
           <div className='w-[40%] p-2 flex list-none justify-evenly rounded-[25px] bg-[#071A45] text-white font-thin py-3'>
             <li>Home</li>
             <li>About Us</li>

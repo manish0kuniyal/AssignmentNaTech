@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-
+import { useState } from 'react';
+import {motion} from "framer-motion"
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -7,13 +7,19 @@ function Navbar() {
     setMenuOpen(!menuOpen);
   }
 
-  const closeMenu = () => {
-    setMenuOpen(false);
-  }
+  // const closeMenu = () => {
+  //   setMenuOpen(false);
+  // }
 
   return (
     <>
-      <div className='p-4  py-6 flex justify-between items-center'>
+      <motion.div 
+      initial={{ y: -100 }} 
+      animate={{ y: 0 }}     
+      transition={{ duration: 0.5 }} 
+     
+      
+      className='p-4  py-6 flex justify-between items-center'>
         <div className='mx-4 flex text-[2vmax] text-[#071A45] font-thin'>
           <p className='font-bold mr-2'>XYZ</p>INDUSTRIES
         </div>
@@ -69,7 +75,7 @@ function Navbar() {
             <button className='px-3 bg-[#3A7DFF] text-white rounded-[20px] p-2'>Sign In</button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
